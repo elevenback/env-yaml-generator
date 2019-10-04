@@ -1,0 +1,50 @@
+version: 2
+jobs:
+  lint:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10.15.1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-
+      - run: yarn
+      - run: yarn prettier --check './src/*.ts'
+  build:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10.15.1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-
+      - run: yarn
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn tsc
+  test:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10.15.1
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          - v1-dependencies-
+      - run: yarn
+      - run: yarn test
+
+workflows:
+  version: 2
+  main:
+    jobs:
+      - lint
+      - build
+      - test
