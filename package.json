@@ -1,7 +1,10 @@
 {
-  "name": "env-yaml-generator",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@elevenback/env-yaml-generator",
+  "version": "0.1.0",
+  "main": "lib/cli.js",
+  "bin": {
+    "create-env-yaml": "./lib/cli.js"
+  },
   "repository": "ssh://git@github.com/elevenback/env-yaml-generator.git",
   "author": "HANATANI Takuma <mail@potato4d.me>",
   "license": "MIT",
@@ -17,6 +20,7 @@
     "@types/yaml": "^1.0.2",
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
+    "standard-version": "^7.0.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
   },
