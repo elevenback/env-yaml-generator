@@ -1,5 +1,7 @@
 # @elevenback/env-yaml-generator
 
+[![codecov](https://codecov.io/gh/elevenback/env-yaml-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/elevenback/env-yaml-generator)
+
 env.yaml auto generate CLI tool for Google AppEngine.
 
 ## Motivation
