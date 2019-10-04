@@ -1,6 +1,6 @@
 {
   "name": "@elevenback/env-yaml-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/cli.js",
   "bin": {
     "create-env-yaml": "./lib/cli.js"
