@@ -1,0 +1,27 @@
+{
+  "name": "env-yaml-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/elevenback/env-yaml-generator.git",
+  "author": "HANATANI Takuma <mail@potato4d.me>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc",
+    "test": "jest",
+    "format": "prettier './src/*.ts' --write"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/meow": "^5.0.0",
+    "@types/node": "^12.7.11",
+    "@types/yaml": "^1.0.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {
+    "meow": "^5.0.0",
+    "yaml": "^1.7.0"
+  }
+}
