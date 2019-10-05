@@ -3,5 +3,11 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverageFrom: [
     'src/**/*.ts'
+  ],
+  coveragePathIgnorePatterns: [
+    'src/**/*.spec.ts'
+  ],
+  testPathIgnorePatterns: [
+    './lib/'
   ]
 };
