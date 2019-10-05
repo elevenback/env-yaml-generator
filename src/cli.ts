@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import meow from "meow";
-import { exec } from "./core";
+import meow from 'meow'
+import { exec } from './core'
 
 const CLI = meow(
   `
@@ -13,11 +13,11 @@ const CLI = meow(
   {
     flags: {
       environment: {
-        type: "string",
-        alias: "E"
+        type: 'string',
+        alias: 'E'
       }
     }
   }
-);
+)
 
-exec(CLI.flags);
+exec(CLI.flags)

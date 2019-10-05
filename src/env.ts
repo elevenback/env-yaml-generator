@@ -1,8 +1,8 @@
 type Environments = NodeJS.ProcessEnv & {
-  [key: string]: string | undefined;
-};
+  [key: string]: string | undefined
+}
 
-type KeyValuePairs = [string, string | undefined];
+type KeyValuePairs = [string, string | undefined]
 
 export function getTargetEnvironments(
   processEnv: NodeJS.ProcessEnv,
@@ -10,19 +10,19 @@ export function getTargetEnvironments(
 ): Environments {
   return Object.entries(processEnv)
     .filter(([k, v]: KeyValuePairs) => {
-      return k.includes(`${prefix}_`);
+      return k.includes(`${prefix}_`)
     })
     .map(
       ([k, v]: KeyValuePairs): KeyValuePairs => {
-        return [k.replace(`${prefix}_`, ""), v];
+        return [k.replace(`${prefix}_`, ''), v]
       }
     )
     .reduce((before: Environments, after: KeyValuePairs) => {
       return {
         ...before,
         [after[0]]: after[1]
-      };
-    }, {});
+      }
+    }, {})
 }
 
 export function convertAppEngineStyleYamlFromEnvironments(
@@ -30,7 +30,7 @@ export function convertAppEngineStyleYamlFromEnvironments(
 ): { env_variables: Environments } {
   return {
     env_variables: environments
-  };
+  }
 }
 
 // TODO: Implement feature
