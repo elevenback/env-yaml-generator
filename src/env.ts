@@ -10,7 +10,7 @@ export function getTargetEnvironments(
 ): Environments {
   return Object.entries(environments)
     .filter(([k, v]: KeyValuePairs) => {
-      return k.includes(`${prefix}_`)
+      return k.startsWith(`${prefix}_`)
     })
     .map(
       ([k, v]: KeyValuePairs): KeyValuePairs => {
