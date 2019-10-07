@@ -17,7 +17,7 @@ export function createYAML(
 ): string {
   let environments = processEnv as Environments
   if (environment) {
-    environments = getTargetEnvironments(processEnv, environment)
+    environments = getTargetEnvironments(environments, environment)
   }
   if (filter) {
     environments = getFilteredEnvironments(environments, filter)
