@@ -25,6 +25,21 @@ export function getTargetEnvironments(
     }, {})
 }
 
+export function getFilteredEnvironments(
+  environments: Environments,
+  filter: string
+): Environments {
+  const regex = new RegExp(filter)
+  return Object.entries(environments)
+    .filter(([k, v]) => regex.exec(k))
+    .reduce((before, after) => {
+      return {
+        ...before,
+        [after[0]]: after[1]
+      }
+    }, {})
+}
+
 export function convertAppEngineStyleYamlFromEnvironments(
   environments: Environments
 ): { env_variables: Environments } {

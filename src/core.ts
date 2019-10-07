@@ -1,6 +1,7 @@
 import {
   getTargetEnvironments,
-  convertAppEngineStyleYamlFromEnvironments
+  convertAppEngineStyleYamlFromEnvironments,
+  getFilteredEnvironments
 } from './env'
 import { promisify } from 'util'
 import * as YAML from 'yaml'
@@ -10,9 +11,13 @@ const writeFile = promisify(fs.writeFile)
 
 export function createYAML(
   processEnv: NodeJS.ProcessEnv,
-  environment: string
+  environment: string,
+  filter?: string
 ): string {
-  const environments = getTargetEnvironments(processEnv, environment)
+  let environments = getTargetEnvironments(processEnv, environment)
+  if (filter) {
+    environments = getFilteredEnvironments(environments, filter)
+  }
   const yamlData = YAML.stringify(
     convertAppEngineStyleYamlFromEnvironments(environments)
   )
@@ -21,7 +26,8 @@ export function createYAML(
 
 export async function exec(flags: Result['flags']) {
   const environment = (flags.environment as string | undefined) || 'DEV'
-  const yamlData = createYAML(process.env, environment)
+  const filter = flags.filter as string | undefined
+  const yamlData = createYAML(process.env, environment, filter)
   try {
     await writeFile('env.yaml', yamlData, { encoding: 'utf8' })
   } catch (e) {
