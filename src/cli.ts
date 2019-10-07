@@ -8,7 +8,7 @@ const CLI = meow(
     $ create-env-yaml
 
   Options
-    --environment, -E prefix for target env vars name (default is "DEV_")
+    --environment, -E prefix for target env vars name (optional)
     --filter, -F regex filter for target env vars name (optional)
 `,
   {
