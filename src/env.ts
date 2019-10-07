@@ -1,16 +1,16 @@
-type Environments = NodeJS.ProcessEnv & {
+export type Environments = NodeJS.ProcessEnv & {
   [key: string]: string | undefined
 }
 
 type KeyValuePairs = [string, string | undefined]
 
 export function getTargetEnvironments(
-  processEnv: NodeJS.ProcessEnv,
+  environments: Environments,
   prefix: string
 ): Environments {
-  return Object.entries(processEnv)
+  return Object.entries(environments)
     .filter(([k, v]: KeyValuePairs) => {
-      return k.includes(`${prefix}_`)
+      return k.startsWith(`${prefix}_`)
     })
     .map(
       ([k, v]: KeyValuePairs): KeyValuePairs => {

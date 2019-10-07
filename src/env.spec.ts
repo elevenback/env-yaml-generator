@@ -19,10 +19,10 @@ describe('src/env.ts', () => {
       it('returns only API related environments', () => {
         const processEnvMock = {
           API_KEY: 'https://prod.example.com',
-          OTHERSERVICE_KEY: 'OTHERSERVICE_VALUE',
+          OTHERSERVICE_API_KEY: 'OTHERSERVICE_VALUE',
           API2_KEY: 'https://prod2.example.com'
         }
-        expect(env.getFilteredEnvironments(processEnvMock, 'API_.+')).toEqual({
+        expect(env.getFilteredEnvironments(processEnvMock, '^API_.+')).toEqual({
           API_KEY: 'https://prod.example.com'
         })
       })
