@@ -35,6 +35,24 @@ env_variables:
   API_ROOT: "https://dev.example.com"
 ```
 
+## Commandline Options
+
+### environment(-E)
+
+- type: string
+- required: false
+- default: null
+
+If you given environment option to CLI, The CLI extracts only starts with `${environment}_`  environment variables.
+
+### filter(-F)
+
+- type: Regexp
+- required: false
+- default: null
+
+If you given filter option to CLI, The CLI extracts only environment variables matches regexp.
+
 ## LICENCE
 
 MIT
