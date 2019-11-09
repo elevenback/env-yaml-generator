@@ -14,16 +14,16 @@
     "format": "prettier './src/*.ts' --write"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.18",
-    "@types/meow": "^5.0.0",
-    "@types/node": "^12.7.11",
-    "@types/yaml": "^1.0.2",
-    "codecov": "^3.6.1",
-    "jest": "^24.9.0",
-    "prettier": "^1.18.2",
-    "standard-version": "^7.0.0",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.3"
+    "@types/jest": "24.0.18",
+    "@types/meow": "5.0.0",
+    "@types/node": "12.7.11",
+    "@types/yaml": "1.0.2",
+    "codecov": "3.6.1",
+    "jest": "24.9.0",
+    "prettier": "1.18.2",
+    "standard-version": "7.0.0",
+    "ts-jest": "24.1.0",
+    "typescript": "3.6.3"
   },
   "dependencies": {
     "meow": "^5.0.0",
