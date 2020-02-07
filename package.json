@@ -18,7 +18,7 @@
     "@types/meow": "5.0.0",
     "@types/node": "12.12.21",
     "@types/yaml": "1.2.0",
-    "codecov": "3.6.1",
+    "codecov": "3.6.4",
     "jest": "24.9.0",
     "prettier": "1.19.1",
     "standard-version": "7.0.1",
