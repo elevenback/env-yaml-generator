@@ -19,7 +19,7 @@
     "@types/node": "12.12.21",
     "@types/yaml": "1.2.0",
     "codecov": "3.6.4",
-    "jest": "24.9.0",
+    "jest": "25.1.0",
     "prettier": "1.19.1",
     "standard-version": "7.1.0",
     "ts-jest": "24.3.0",
