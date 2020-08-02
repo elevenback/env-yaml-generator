@@ -22,7 +22,7 @@
     "jest": "26.2.1",
     "prettier": "1.19.1",
     "standard-version": "8.0.2",
-    "ts-jest": "25.5.1",
+    "ts-jest": "26.1.4",
     "typescript": "3.9.5"
   },
   "dependencies": {
