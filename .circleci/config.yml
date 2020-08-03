@@ -3,7 +3,7 @@ jobs:
   lint:
     working_directory: ~/app
     docker:
-      - image: circleci/node:10.21.0
+      - image: circleci/node:10.22.0
     steps:
       - checkout
       - restore_cache:
@@ -15,7 +15,7 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: circleci/node:10.21.0
+      - image: circleci/node:10.22.0
     steps:
       - checkout
       - restore_cache:
@@ -31,7 +31,7 @@ jobs:
   test:
     working_directory: ~/app
     docker:
-      - image: circleci/node:10.21.0
+      - image: circleci/node:10.22.0
     steps:
       - checkout
       - restore_cache:
