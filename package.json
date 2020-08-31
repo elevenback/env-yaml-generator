@@ -14,7 +14,7 @@
     "format": "prettier './src/*.ts' --write"
   },
   "devDependencies": {
-    "@types/jest": "26.0.7",
+    "@types/jest": "26.0.12",
     "@types/meow": "5.0.0",
     "@types/node": "12.12.53",
     "@types/yaml": "1.2.0",
