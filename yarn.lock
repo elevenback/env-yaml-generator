@@ -145,6 +145,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@elevenback/renovate-config@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@elevenback/renovate-config/-/renovate-config-0.3.0.tgz#9fe4c84375305e51fa7e2206d7e4a856e2420d13"
+  integrity sha512-au8gNOTkPXJt23t2mwp7sNN7xfP4vrz6DnW6CrTlJ7hH3BlI1kx3nCT8A6PGiRm1oSoKmouzdQN4rabcc87OgA==
+
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.9.0.tgz#79b1bc06fb74a8cfb01cbdedf945584b1b9707f0"
