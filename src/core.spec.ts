@@ -7,7 +7,7 @@ describe('src/core.ts', () => {
         DEV_API_ROOT: 'https://dev.example.com',
         PROD_API_ROOT: 'https://prod.example.com',
         DEV_OTHERSERVICE_ROOT: 'https://dev.other.example.com',
-        PROD_OTHERSERVICE_ROOT: 'https://prod.other.example.com'
+        PROD_OTHERSERVICE_ROOT: 'https://prod.other.example.com',
       }
       const expectYaml = `env_variables:
   API_ROOT: https://dev.example.com

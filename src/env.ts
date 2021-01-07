@@ -20,7 +20,7 @@ export function getTargetEnvironments(
     .reduce((before: Environments, after: KeyValuePairs) => {
       return {
         ...before,
-        [after[0]]: after[1]
+        [after[0]]: after[1],
       }
     }, {})
 }
@@ -35,7 +35,7 @@ export function getFilteredEnvironments(
     .reduce((before, after) => {
       return {
         ...before,
-        [after[0]]: after[1]
+        [after[0]]: after[1],
       }
     }, {})
 }
@@ -44,7 +44,7 @@ export function convertAppEngineStyleYamlFromEnvironments(
   environments: Environments
 ): { env_variables: Environments } {
   return {
-    env_variables: environments
+    env_variables: environments,
   }
 }
 
