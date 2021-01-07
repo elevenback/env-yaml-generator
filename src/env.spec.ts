@@ -6,10 +6,10 @@ describe('src/env.ts', () => {
       it('returns only DEV environments', () => {
         const processEnvMock = {
           DEV_API_ROOT: 'https://dev.example.com',
-          PROD_API_ROOT: 'https://prod.example.com'
+          PROD_API_ROOT: 'https://prod.example.com',
         }
         expect(env.getTargetEnvironments(processEnvMock, 'DEV')).toEqual({
-          API_ROOT: 'https://dev.example.com'
+          API_ROOT: 'https://dev.example.com',
         })
       })
     })
@@ -20,10 +20,10 @@ describe('src/env.ts', () => {
         const processEnvMock = {
           API_KEY: 'https://prod.example.com',
           OTHERSERVICE_API_KEY: 'OTHERSERVICE_VALUE',
-          API2_KEY: 'https://prod2.example.com'
+          API2_KEY: 'https://prod2.example.com',
         }
         expect(env.getFilteredEnvironments(processEnvMock, '^API_.+')).toEqual({
-          API_KEY: 'https://prod.example.com'
+          API_KEY: 'https://prod.example.com',
         })
       })
     })
@@ -31,14 +31,14 @@ describe('src/env.ts', () => {
   describe('.convertAppEngineStyleYamlFromEnvironments', () => {
     it('returns wrapped environments', () => {
       const environments = {
-        API_ROOT: 'https://dev.example.com'
+        API_ROOT: 'https://dev.example.com',
       }
       expect(
         env.convertAppEngineStyleYamlFromEnvironments(environments)
       ).toEqual({
         env_variables: {
-          API_ROOT: 'https://dev.example.com'
-        }
+          API_ROOT: 'https://dev.example.com',
+        },
       })
     })
   })

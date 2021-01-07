@@ -15,13 +15,13 @@ const CLI = meow(
     flags: {
       environment: {
         type: 'string',
-        alias: 'E'
+        alias: 'E',
       },
       filter: {
         type: 'string',
-        alias: 'F'
-      }
-    }
+        alias: 'F',
+      },
+    },
   }
 )
 

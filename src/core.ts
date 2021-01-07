@@ -2,7 +2,7 @@ import {
   getTargetEnvironments,
   convertAppEngineStyleYamlFromEnvironments,
   getFilteredEnvironments,
-  Environments
+  Environments,
 } from './env'
 import { promisify } from 'util'
 import * as YAML from 'yaml'
