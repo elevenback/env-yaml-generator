@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@elevenback/renovate-config": "0.4.0",
-    "@types/jest": "27.0.2",
+    "@types/jest": "27.0.3",
     "@types/meow": "5.0.0",
     "@types/node": "16.11.7",
     "@types/yaml": "1.9.7",
