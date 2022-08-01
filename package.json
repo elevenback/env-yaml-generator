@@ -17,7 +17,7 @@
     "@elevenback/renovate-config": "0.4.0",
     "@types/jest": "28.1.6",
     "@types/meow": "5.0.0",
-    "@types/node": "16.11.45",
+    "@types/node": "16.11.47",
     "@types/yaml": "1.9.7",
     "codecov": "3.8.3",
     "jest": "28.1.3",
