@@ -24,7 +24,7 @@
     "prettier": "2.2.1",
     "standard-version": "9.2.0",
     "ts-jest": "28.0.8",
-    "typescript": "4.2.4"
+    "typescript": "5.6.3"
   },
   "dependencies": {
     "meow": "^5.0.0",
