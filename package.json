@@ -17,14 +17,14 @@
     "@elevenback/renovate-config": "0.4.0",
     "@types/jest": "28.1.8",
     "@types/meow": "5.0.0",
-    "@types/node": "18.15.11",
+    "@types/node": "18.19.59",
     "@types/yaml": "1.9.7",
     "codecov": "3.8.3",
     "jest": "28.1.3",
-    "prettier": "2.2.1",
-    "standard-version": "9.2.0",
+    "prettier": "2.8.8",
+    "standard-version": "9.5.0",
     "ts-jest": "28.0.8",
-    "typescript": "4.2.4"
+    "typescript": "4.9.5"
   },
   "dependencies": {
     "meow": "^5.0.0",
